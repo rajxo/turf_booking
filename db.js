@@ -1,6 +1,7 @@
 const mongoose=require('mongoose')
-
-const mongoUrl='mongodb://localhost:27017/flipkart'
+require('dotenv').config()
+//const mongoUrl='mongodb://localhost:27017/flipkart'
+const mongoUrl=process.env.mongoUrl //mongodb url from .env 
 
 mongoose.connect(mongoUrl,{
     useNewUrlParser:true,

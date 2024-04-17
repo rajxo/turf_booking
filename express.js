@@ -21,5 +21,7 @@ app.get('/',function(req,res){
     res.send('hello welcome to turf booking portal');
 })
 
-
-app.listen(3000)
+const port=process.env.port || 3000
+app.listen(3000,()=>{
+    console.log("listening on portno 3000");
+})
